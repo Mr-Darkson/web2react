@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #3498db;
+    --primary-hover: #2980b9;
+    --danger-color: #e74c3c;
+    --danger-hover: #c0392b;
+    --text-color: #333;
+    --bg-color: #f5f5f5;
+    --white: #fff;
+    --shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    --border-radius: 4px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.main {
+    position: relative;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.anime-detail,
+.anime-grid {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .search {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search__input {
+        width: 100%;
+    }
+
+    .anime-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    .anime-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .anime-card__image {
+        height: 200px;
+    }
+}

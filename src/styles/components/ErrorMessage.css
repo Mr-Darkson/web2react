@@ -1,0 +1,9 @@
+.error {
+    color: var(--danger-color);
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(231, 76, 60, 0.1);
+    border-radius: var(--border-radius);
+    margin: 20px auto;
+    max-width: 500px;
+}
